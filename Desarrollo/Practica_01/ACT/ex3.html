@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Experiencia de Práctica N° 03 - Tablas</title>
+
+    <!-- AQUÍ SE INTEGRA EL CSS CON LA ETIQUETA STYLE -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+        }
+        /* Título principal */
+        h1 {
+            text-align: center;
+        }
+        /* Títulos de las secciones */
+        h2 {
+            margin-top: 40px;
+        }
+
+        table {
+            border-collapse: collapse;
+            margin-top: 20px;
+            margin-bottom: 30px;
+        }
+        /* Bordes y espacios */
+        th,
+        td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+
+        th { /* Encabezado */
+            background-color: #dddddd;
+        }
+        /* Estilo para las columnas*/
+        .col-verde {
+            background-color: #97DB9A;
+        }
+
+        .col-ancho {
+            width: 42px;
+        }
+
+        .col-especial {
+            background-color: #DCC48E;
+            border: 4px solid #C1437A;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Experiencia de Práctica N° 03: Tablas</h1>
+
+    <h2>A) Crea tu primera tabla</h2>
+
+    <table>
+        <tr>
+            <td>Hola, soy tu primera celda.</td>
+            <td>Soy tu segunda celda.</td>
+            <td>Soy tu tercera celda.</td>
+            <td>Soy tu cuarta celda.</td>
+        </tr>
+        <tr>
+            <td>Segunda fila, primera celda.</td>
+            <td>Celda 2.</td>
+            <td>Celda 3.</td>
+            <td>Celda 4.</td>
+        </tr>
+    </table>
+
+    <p>Tabla N° 1: Tabla de datos</p>
+
+    <h2>B) Encabezados de tabla</h2>
+
+    <table>
+        <tr>
+            <th>Nombre</th>
+            <th>Edad</th>
+            <th>Ciudad</th>
+            <th>Curso</th>
+        </tr>
+        <tr>
+            <td>Renzo</td>
+            <td>20</td>
+            <td>Arequipa</td>
+            <td>Desarrollo de Aplicaciones</td>
+        </tr>
+    </table>
+    <p>Tabla N° 2: Encabezado</p>
+
+    <h2>C) Estilo común a las columnas</h2>
+    <table>
+        <colgroup>
+            <col>
+            <col class="col-verde">
+        </colgroup>
+        <tr>
+            <th>Dato 1</th>
+            <th>Dato 2</th>
+        </tr>
+        <tr>
+            <td>Calcuta</td>
+            <td>Pizza</td>
+        </tr>
+        <tr>
+            <td>Robots</td>
+            <td>Jazz</td>
+        </tr>
+    </table>
+    <p>Tabla N° 3: Estilo comun</p>
+
+    <h2>D) Colgroup y Col</h2>
+
+    <table>
+        <colgroup>
+            <col>
+            <col>
+            <col class="col-verde">
+            <col class="col-ancho">
+            <col class="col-verde">
+            <col class="col-especial">
+            <col class="col-ancho">
+            <col class="col-ancho">
+        </colgroup>
+
+        <tr>
+            <th>Hora</th>
+            <th>Curso</th>
+            <th>Lunes</th>
+            <th>Martes</th>
+            <th>Miércoles</th>
+            <th>Jueves</th>
+            <th>Viernes</th>
+            <th>Sábado</th>
+        </tr>
+        <tr>
+            <td>08:00</td>
+            <td>Inglés</td>
+            <td>-</td>
+            <td>Inglés</td>
+            <td>-</td>
+            <td>Inglés</td>
+            <td>Inglés</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>10:00</td>
+            <td>Portugues</td>
+            <td>-</td>
+            <td>Portugues</td>
+            <td>-</td>
+            <td>Portugues</td>
+            <td>Portugues</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>12:00</td>
+            <td>Salida</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+        </tr>
+    </table>
+
+    <p>Tabla N° 4: Tabla de horario de cursos de idiomas.</p>
+
+</body>
+</html>
