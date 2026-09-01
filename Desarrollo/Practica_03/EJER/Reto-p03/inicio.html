@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Teyvat Hub Solutions | Optimización Gacha</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- HEADER (Inspirado en la barra superior de HoYoLAB) -->
+  <header class="header">
+    <a href="#" class="logo">Teyvat<span>Hub</span></a>
+    <nav class="nav">
+      <a href="#panel">Panel Diario</a>
+      <a href="#servicios">Servicios</a>
+      <a href="#guias">Guías Populares</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HERO / INTRODUCCIÓN -->
+    <section class="hero" id="panel">
+      <div class="hero__texto">
+        <span class="etiqueta">BIENVENIDO VIAJERO</span>
+        <h1>Maximiza tus Protogemas y Recursos</h1>
+        <p>Somos una consultora tecnológica especializada en la optimización de cuentas. Automatizamos tus rutas de farmeo, gestionamos tus resinas y planificamos tus tiradas gacha para garantizar un rendimiento del 100% sin esfuerzo.</p>
+        <div class="acciones">
+          <a href="#servicios" class="boton boton--principal">Ver Planes de Farmeo</a>
+          <a href="#guias" class="boton boton--secundario">Leer Registro de Guías</a>
+        </div>
+      </div>
+      
+      <!-- CONTENEDOR PARECIDO AL RECUADRO DE RECOMPENSAS DIARIAS DE TU IMAGEN -->
+      <div class="recompensas-panel">
+        <div class="panel-header">
+          <p>Visitas acumuladas este mes: <strong>1</strong></p>
+          <button class="boton-recuperar">Recuperar Recompensa</button>
+        </div>
+        
+        <!-- Cuadrícula interactiva tipo calendario de la captura -->
+        <div class="grid-recompensas">
+          <div class="item-recompensa item--reclamado">
+            <span class="icono-recompensa">💎</span>
+            <span class="dia">Día 1</span>
+          </div>
+          <div class="item-recompensa">
+            <span class="icono-recompensa">🔮</span>
+            <span class="dia">Día 2</span>
+          </div>
+          <div class="item-recompensa">
+            <span class="icono-recompensa">🪙</span>
+            <span class="dia">Día 3</span>
+          </div>
+          <div class="item-recompensa">
+            <span class="icono-recompensa">🍖</span>
+            <span class="dia">Día 4</span>
+          </div>
+          <div class="item-recompensa">
+            <span class="icono-recompensa">📜</span>
+            <span class="dia">Día 5</span>
+          </div>
+          <div class="item-recompensa">
+            <span class="icono-recompensa">⚔️</span>
+            <span class="dia">Día 6</span>
+          </div>
+          <div class="item-recompensa">
+            <span class="icono-recompensa">💎</span>
+            <span class="dia">Día 7</span>
+          </div>
+        </div>
+        <div class="panel-footer">
+          <span>Olvidaste registrarte: 0 días</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN DE SERVICIOS -->
+    <section id="servicios" class="servicios">
+      <div class="seccion-titulo">
+        <span>SERVICIOS DE CONSULTORÍA</span>
+        <h2>Optimización Avanzada</h2>
+      </div>
+      
+      <div class="tarjetas-grid">
+        <article class="tarjeta">
+          <div class="tarjeta__icono">🎒</div>
+          <h3>Gestión de Resina</h3>
+          <p>Vaciamos tu resina diaria optimizando artefactos según las necesidades de tus personajes principales.</p>
+          <a href="#">Contratar Servicio &rarr;</a>
+        </article>
+
+        <article class="tarjeta tarjeta--destacada">
+          <div class="tarjeta__icono">👑</div>
+          <h3>Auditoría de Builds</h3>
+          <p>Análisis matemático profundo de tus composiciones de equipo, rotaciones de daño y optimización de armas.</p>
+          <a href="#">Contratar Servicio &rarr;</a>
+        </article>
+
+        <article class="tarjeta">
+          <div class="tarjeta__icono">🗺️</div>
+          <h3>Farmeo de Mapa al 100%</h3>
+          <p>Recolectamos todos los cofres, óculos y materiales de ascensión de las nuevas regiones del mapa.</p>
+          <a href="#">Contratar Servicio &rarr;</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- CONTENIDO POPULAR (Sección de blogs inferior de tu imagen) -->
+    <section id="guias" class="contenido-popular">
+      <div class="seccion-titulo">
+        <span>COMUNIDAD</span>
+        <h2>Contenido Popular de Hoy</h2>
+      </div>
+
+      <div class="guias-layout">
+        <!-- Post de Blog 1 -->
+        <article class="guia-post">
+          <div class="guia-post__mini">👁️‍🗨️</div>
+          <div class="guia-post__info">
+            <h3>Preguntas existenciales de Fontaine</h3>
+            <p>¡Hola Viajero! Analizamos los misterios ocultos detrás de las misiones de arconte más recientes...</p>
+            <span class="autor">Por: Favonius Messenger</span>
+          </div>
+        </article>
+
+        <!-- Post de Blog 2 -->
+        <article class="guia-post">
+          <div class="guia-post__mini">💫</div>
+          <div class="guia-post__info">
+            <h3>[Guía de Protogemas] Consigue 8000 gratis</h3>
+            <p>Participa en la nueva discusión de la comunidad y asegura tus tiros para el próximo banner de personaje...</p>
+            <span class="autor">Por: Diligent Hilichurl</span>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>&copy; 2026 Teyvat Hub Solutions. No afiliado oficialmente con HoYoVerse.</p>
+    <div class="footer__enlaces">
+      <a href="#">Términos</a>
+      <a href="#">Privacidad</a>
+    </div>
+  </footer>
+
+</body>
+</html>
