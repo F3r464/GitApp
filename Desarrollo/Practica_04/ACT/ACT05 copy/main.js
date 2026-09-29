@@ -115,7 +115,7 @@ const duplicar3 = numero=> {
 const duplicar4 = numero=> numero * 2;
 
 function presentar(nombre, edad){
-    return `${nombre} tiene ${edad} años`;
+    return '${nombre} tiene ${edad} años';
 }
 console.log(presentar("Diego",25));
 console.log(presentar(23,"Eduardo"));
@@ -174,4 +174,81 @@ const contar = crearContador();
 
 console.log(contar());
 console.log(contar());
+
+
+
+
+
+const producto1 = {
+    id: 1,
+    nombre: "Teclado",
+    precio: 120,
+    stock: 8
+};
+
+producto1.nombre;
+const propiedad="precio";
+console.log(producto1[propiedad]);
+
+producto1.stock = 15;
+console.log(producto1);
+
+delete producto1.stock;
+console.log(producto1);
+
+const producto2 = {
+    nombre: "Monitor",
+    precio: 900,
+    calcularTotal(cantidad){
+        return this.precio * cantidad;
+    }
+};
+
+console.log(producto2.calcularTotal(2));
+
+
+
+const frutas = [
+    "Manzana",
+    "Banana",
+    "Fresa"
+];
+console.log(frutas[3]);
+
+const numeros = new Array(10, 14, 25, 6);
+console.log(numeros);
+
+console.log(numeros.length + " datos");
+
+const colores = Array.of(
+    "Rojo",
+    "Verde",
+    "Azul"
+);
+console. log(colores);
+
+frutas.push("uva");
+frutas.pop();
+frutas.unshift("pera");
+frutas.shift();
+
+console.log("posicion "+frutas.indexOf("Fresa"));
+console.log("posicion no existe "+frutas.indexOf("fresa"));
+
+productos.forEach(producto=>(
+    console.log(producto.nombre, producto.precio)
+));
+
+const numeros1 = [5, 12, 3, 20, 8];
+const mayores = numeros1. filter(
+    numero => numero > 10
+);
+console.log(mayores);
+
+
+const numeros2 = [10, 20, 30];
+const total = numeros2. reduce(
+    (acumulador, numero) => acumulador + numero, 0
+);
+console.log(total);
 

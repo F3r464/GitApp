@@ -1,0 +1,26 @@
+.btn {
+  display: inline-block;
+  font-family: $fuente-familia;
+  font-size: px-a-rem(16px);
+  padding: px-a-rem(10px) px-a-rem(20px);
+  margin: px-a-rem(5px);
+  border-radius: px-a-rem(4px);
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+}
+
+@each $nombre, $color in $tema-colores {
+  .btn-#{$nombre} {
+    @include tema-componente($color);
+
+    &:hover {
+      @if lightness($color) > 50% {
+        background-color: darken($color, 10%);
+      } @else {
+        background-color: lighten($color, 10%);
+      }
+    }
+  }
+}

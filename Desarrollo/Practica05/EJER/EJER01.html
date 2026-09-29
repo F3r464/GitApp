@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dashboard Administrativo</title>
+  <link href="https://jsdelivr.net" rel="stylesheet">
+  <style>
+    @media (min-width: 992px) {
+      .sidebar-desktop {
+        position: fixed;
+        top: 56px;
+        bottom: 0;
+        left: 0;
+        width: 240px;
+        z-index: 100;
+      }
+      .main-content {
+        margin-left: 240px;
+      }
+    }
+  </style>
+</head>
+<body class="bg-light">
+
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow">
+      <div class="container-fluid">
+        <button class="navbar-toggler me-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebarMovil" aria-controls="sidebarMovil">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand fw-bold me-auto" href="#">PanelAdmin</a>
+        <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modalNuevo">Nuevo Registro</button>
+      </div>
+    </nav>
+  </header>
+
+  <aside class="offcanvas offcanvas-start bg-dark text-white d-lg-none" tabindex="-1" id="sidebarMovil">
+    <div class="offcanvas-header border-bottom border-secondary">
+      <h5 class="offcanvas-title fw-bold">Menú Sistema</h5>
+      <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body p-0">
+      <ul class="nav flex-column p-3 gap-2">
+        <li class="nav-item"><a class="nav-link text-white bg-primary rounded active" href="#">Inicio</a></li>
+        <li class="nav-item"><a class="nav-link text-white-50" href="#">Usuarios</a></li>
+        <li class="nav-item"><a class="nav-link text-white-50" href="#">Seguridad</a></li>
+        <li class="nav-item"><a class="nav-link text-white-50" href="#">Reportes</a></li>
+      </ul>
+    </div>
+  </aside>
+
+  <aside class="sidebar-desktop bg-dark text-white d-none d-lg-block border-top border-secondary">
+    <nav>
+      <ul class="nav flex-column p-3 gap-2">
+        <li class="nav-item"><a class="nav-link text-white bg-primary rounded active" href="#">Inicio</a></li>
+        <li class="nav-item"><a class="nav-link text-white-50" href="#">Usuarios</a></li>
+        <li class="nav-item"><a class="nav-link text-white-50" href="#">Seguridad</a></li>
+        <li class="nav-item"><a class="nav-link text-white-50" href="#">Reportes</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <main class="main-content pt-5 mt-4 px-3 px-md-4">
+    <section class="row g-3 mb-4" aria-label="Métricas de rendimiento">
+      <div class="col-12 col-md-6 col-lg-3">
+        <article class="card shadow-sm border-0 border-start border-primary border-4 h-100">
+          <div class="card-body">
+            <h6 class="card-subtitle text-muted mb-1 text-uppercase small fw-bold">Usuarios Activos</h6>
+            <p class="card-text h3 fw-bold mb-0">1,245</p>
+          </div>
+        </article>
+      </div>
+      <div class="col-12 col-md-6 col-lg-3">
+        <article class="card shadow-sm border-0 border-start border-danger border-4 h-100">
+          <div class="card-body">
+            <h6 class="card-subtitle text-muted mb-1 text-uppercase small fw-bold">Alertas de Seguridad</h6>
+            <p class="card-text h3 fw-bold mb-0">3</p>
+          </div>
+        </article>
+      </div>
+      <div class="col-12 col-md-6 col-lg-3">
+        <article class="card shadow-sm border-0 border-start border-warning border-4 h-100">
+          <div class="card-body">
+            <h6 class="card-subtitle text-muted mb-1 text-uppercase small fw-bold">Carga del Servidor</h6>
+            <p class="card-text h3 fw-bold mb-0">74%</p>
+          </div>
+        </article>
+      </div>
+      <div class="col-12 col-md-6 col-lg-3">
+        <article class="card shadow-sm border-0 border-start border-success border-4 h-100">
+          <div class="card-body">
+            <h6 class="card-subtitle text-muted mb-1 text-uppercase small fw-bold">Estado General</h6>
+            <p class="card-text h3 fw-bold mb-0">Normal</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="card shadow-sm border-0 mb-4" aria-label="Tabla de eventos">
+      <header class="card-header bg-white py-3">
+        <h5 class="card-title mb-0 fw-bold">Últimos Eventos del Sistema</h5>
+      </header>
+      <div class="card-body p-0">
+        <div class="table-responsive">
+          <table class="table table-hover align-middle mb-0">
+            <thead class="table-light">
+              <tr>
+                <th class="ps-3">ID</th>
+                <th>Evento</th>
+                <th>Usuario</th>
+                <th>Prioridad</th>
+                <th class="pe-3">Fecha</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="ps-3 fw-bold">#1024</td>
+                <td>Fallo de autenticación repetido</td>
+                <td>admin_sys</td>
+                <td><span class="badge bg-danger">Crítico</span></td>
+                <td class="pe-3 text-muted">Hace 5 min</td>
+              </tr>
+              <tr>
+                <td class="ps-3 fw-bold">#1023</td>
+                <td>Actualización de paquete SSL</td>
+                <td>root</td>
+                <td><span class="badge bg-warning text-dark">Advertencia</span></td>
+                <td class="pe-3 text-muted">Hace 15 min</td>
+              </tr>
+              <tr>
+                <td class="ps-3 fw-bold">#1022</td>
+                <td>Copia de seguridad completada</td>
+                <td>sistema</td>
+                <td><span class="badge bg-success">Normal</span></td>
+                <td class="pe-3 text-muted">Hace 1 hora</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <dialog class="modal fade" id="modalNuevo" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <header class="modal-header">
+          <h5 class="modal-title fw-bold">Agregar Nuevo Registro</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </header>
+        <form>
+          <div class="modal-body d-flex flex-column gap-3">
+            <div>
+              <label class="form-label fw-semibold">Nombre del Evento</label>
+              <input type="text" class="form-control" placeholder="Ej. Caída de servicio" required>
+            </div>
+            <div>
+              <label class="form-label fw-semibold">Prioridad</label>
+              <select class="form-select" required>
+                <option value="" selected disabled>Seleccione una opción</option>
+                <option value="1">Normal</option>
+                <option value="2">Advertencia</option>
+                <option value="3">Crítico</option>
+              </select>
+            </div>
+            <div>
+              <label class="form-label fw-semibold">Detalles adicionales</label>
+              <textarea class="form-control" rows="3" placeholder="Describa brevemente lo ocurrido"></textarea>
+            </div>
+          </div>
+          <footer class="modal-footer gap-2">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+            <button type="submit" class="btn btn-primary">Guardar Registro</button>
+          </footer>
+        </form>
+      </div>
+    </div>
+  </dialog>
+
+  <script src="https://jsdelivr.net"></script>
+</body>
+</html>

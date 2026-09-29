@@ -115,7 +115,7 @@ const duplicar3 = numero=> {
 const duplicar4 = numero=> numero * 2;
 
 function presentar(nombre, edad){
-    return `${nombre} tiene ${edad} años`;
+    return '${nombre} tiene ${edad} años';
 }
 console.log(presentar("Diego",25));
 console.log(presentar(23,"Eduardo"));
@@ -175,3 +175,33 @@ const contar = crearContador();
 console.log(contar());
 console.log(contar());
 
+
+
+
+
+const producto1 = {
+    id: 1,
+    nombre: "Teclado",
+    precio: 120,
+    stock: 8
+};
+
+producto1.nombre;
+const propiedad="precio";
+console.log(producto1[propiedad]);
+
+producto1.stock = 15;
+console.log(producto1);
+
+delete producto1.stock;
+console.log(producto1);
+
+const producto2 = {
+    nombre: "Monitor",
+    precio: 900,
+    calcularTotal(cantidad){
+        return this.precio * cantidad;
+    }
+};
+
+console.log(producto2.calcularTotal(2));

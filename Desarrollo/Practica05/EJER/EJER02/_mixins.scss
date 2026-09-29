@@ -1,0 +1,9 @@
+@mixin tema-componente($color-fondo) {
+  background-color: $color-fondo;
+  
+  @if lightness($color-fondo) > 50% {
+    color: #000000;
+  } @else {
+    color: #ffffff;
+  }
+}

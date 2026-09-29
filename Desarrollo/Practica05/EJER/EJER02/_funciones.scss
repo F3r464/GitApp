@@ -1,0 +1,6 @@
+@function px-a-rem($pixeles) {
+  @if unit($pixeles) == 'px' {
+    $pixeles: $pixeles / 1px;
+  }
+  @return ($pixeles / 16) * 1rem;
+}
